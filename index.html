@@ -1,32 +1,235 @@
-<!-- Unit 5 Project
-Requirements
-[  ] <div> and <span>
-[  ] height: and width:
-[  ] margin: and padding: 
-[  ] Three Images
-
-Select ONE Additional Feature to Add  
-[ no ] Feature 1 - Flexbox
-[ no ] Feature 2 - Flip Card
-[ no ] Feature 3 - Navbar
-[ no ] Feature 4 - Shaking Animation
-[ no ] Feature 5 - Gradient Background
-[ no ] Feature 6 - Spotify Playlist
--->
-
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Unit 1 Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .my-everything {
+        color: red;
+        font-style: italic;
+      }
+      h1 {
+        color: rgb(72, 23, 117);
+      }
+      h2 {
+        color: rgb(72, 23, 117);
+      }
+      body {
+        background-image: url("https://t4.ftcdn.net/jpg/01/11/48/79/360_F_111487955_fB7drdDE9uqEkZPew7Na9le4tZ4wHVlm.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        font-family: "Roboto", sans-serif;
+        font-size: 27px;
+        https: ; //github.com/LaGuardia-WebDev-2024/6-1-js-making-drawings-with-code-nicolasferrera69.githttps://github.com/LaGuardia-WebDev-2024/6-1-js-making-drawings-with-code-nicolasferrera69.git
+      }
 
-<head>
-  <title>Unit 5 Project</title>
-  <meta charset="utf-8">
-  <style>
+      #Title {
+        background-color: white;
+      }
+      #Noir-List {
+        background-color: yellow;
+      }
+      img {
+        border: 5px solid white;
+      }
+      .Htwo {
+        background-color: White;
+      }
+      ol {
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqHyeKT38t_y_ofF1agIutbvXWZtTK9y0oig&s");
+        color: white;
+      }
+      #First-Paragraphs {
+        background: rgb(290, 230, 230);
+        width: 600px;
+        height: 400px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin: 50px;
+        border: 10px solid rgb(160, 140, 130);
+        padding: 30px;
+      }
+      .flip-card {
+        background-color: transparent;
+        width: 300px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px; /* Remove this if you don't want the 3D effect */
+      }
 
-  </style>
-</head>
-<body>
+      /* This container is needed to position the front and back side */
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
 
- 
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
 
-</body>
+      /* Position the front and back side */
+      .flip-card-front,
+      .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden; /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side (fallback if image is missing) */
+      .flip-card-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-card-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="Title">
+      <font size="+4">Why Cat Noir is <em>my</em> Hero.</font>
+    </h1>
+    <img
+      src="https://i.pinimg.com/474x/12/f6/ab/12f6abe1c410adf8f0644aa05aa7a2ad.jpg"
+    />
+    <div id="First-Paragraphs">
+      <p>
+        Cat Noir is one of the most astonishing specimines that we have ever
+        encountered on this earth. How would I sleep at night without my cat
+        noir pillow keeping me safe and sound from all the monsters and spookies
+        of the town?
+        <a
+          target="_blank"
+          href="https://www.msn.com/en-us/health/wellness/which-miraculous-is-the-most-powerful-in-miraculous-ladybug/ar-BB1qu4sl?ocid=BingNewsSerp&apiversion=v2&noservercache=1&domshim=1&renderwebcomponents=1&wcseo=1&batchservertelemetry=1&noservertelemetry=1"
+          >Learn more about his show, Miraculous Ladybug here!
+        </a>
+      </p>
+      <p>
+        Adrien Agreste, more famously known as Cat Noir, is one of the two main
+        protagonists (alongside Marinette Dupain-Cheng) of Miraculous: Tales of
+        Ladybug and Cat Noir and Miraculous World. He is a human-sentimonster
+        created by his late mother Émilie Agreste from her emotions of love. He
+        is a former student in Miss Bustier's class at Collège Françoise Dupont
+        in Paris, France. He is also a former fashion model for his late
+        father's brand. He is currently in a relationship with Marinette
+        Dupain-Cheng.
+      </p>
+    </div>
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <img
+            src="https://assets.mycast.io/characters/adrien-agreste-3033704-normal.jpg?1674560724"
+            alt="Avatar"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+        <div class="flip-card-back">
+          <img
+            src="https://comicvine.gamespot.com/a/uploads/scale_medium/1/18154/5303859-4293357757-latest"
+            style="width: 300px; height: 300px"
+          />
+        </div>
+      </div>
+    </div>
+    <h2 class="Htwo">
+      More reasons why he is <span class="my-everything">my everything.</span>
+    </h2>
+    <ul id="Noir-List">
+      <li>He saves the world every day.</li>
+      <li>He is French</li>
+      <li>He is mysterious</li>
+      <li>
+        He wears a skin tight leather bodysuit to work every day, <em></em>(Love
+        the confidence)
+      </li>
+      <li><strong>He literally has the power of destruction.</strong></li>
+      <li><strong>He is blonde.</strong></li>
+    </ul>
+    <table>
+      <thead>
+        <tr>
+          <h4><th>Ingredients to make a Cat Noir Cake!</th></h4>
+        </tr>
+        <tr>
+          <td>
+            <ol>
+              <li>3 cups (375g) all-purpose flour (spooned and leveled)</li>
+              <li>1 and 1/2 teaspoons baking powder</li>
+              <li>1/2 teaspoon salt</li>
+              <li>
+                1 cup (16 Tbsp; 226g) unsalted butter, softened to room
+                temperature
+              </li>
+              <li>2 ounces of cream cheese, softened to room temperature</li>
+              <li>2 cups (400g) granulated sugar</li>
+              <li>1 large egg, at room temperature</li>
+              <li>2 teaspoons pure vanilla extract</li>
+              <li>1/2 teaspoon almond extract</li>
+            </ol>
+          </td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <a
+      target="_blank"
+      href="https://miraculousladybug.fandom.com/wiki/Adrien_Agreste"
+      >Read more about Cat Noir here!
+      <img
+        src="https://i.pinimg.com/564x/f3/da/a0/f3daa0bff6c8e7a0177824102127b112.jpg"
+      />
+    </a>
+    <table>
+      <thead>
+        <tr>
+          <th>FAVORITE EPISODES</th>
+          <th>NUMBER</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Rockeater</td>
+          <td>17</td>
+        </tr>
+        <tr>
+          <td>Emotion</td>
+          <td>19</td>
+        </tr>
+
+        <tr>
+          <td>Ephemeral</td>
+          <td>22</td>
+        </tr>
+        <tr>
+          <td>Lies</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <img src="https://i.ytimg.com/vi/hvNsdfRvL4o/maxresdefault.jpg" />
+    <p>
+      I'd like, love, and admire to thank Beyonce for allowing me to create this
+      website. Long live the QUEEN B.
+    </p>
+  </body>
 </html>
